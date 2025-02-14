@@ -8,7 +8,7 @@ WORKDIR /var/www/vhosts/localhost/html
 # Copy configuration files
 
 # COPY ./sites/localhost/html /var/www/vhosts/localhost/html
-COPY ./sites/localhost/html ./
+COPY sites/localhost/html ./
 # Expose necessary ports
 EXPOSE 80 443 443/udp 7080
 
