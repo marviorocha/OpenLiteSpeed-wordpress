@@ -86,7 +86,7 @@ $table_prefix = 'wp_';
  *
  * @link https:
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 
 
