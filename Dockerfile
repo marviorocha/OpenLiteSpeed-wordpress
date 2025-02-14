@@ -7,7 +7,7 @@ FROM ghcr.io/ndigitals/openlitespeed:latest
 
 # Copy configuration files
 
-COPY ./sites /var/www/vhosts/
+COPY ./sites/localhost/html /var/www/vhosts/localhost/html
 
 # Expose necessary ports
 EXPOSE 80 443 443/udp 7080
