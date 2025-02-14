@@ -36,13 +36,21 @@ services:
       TZ: ${TimeZone}
     networks:
       - default
+
+  composer:
+    image: composer:latest
+    volumes:
+      - .:/sites/localhost/html
+    working_dir: /sites/localhost/html
+    command: install
+
   phpmyadmin:
     image: bitnami/phpmyadmin:5.2.0-debian-11-r43
     ports:
       - 8080:8080
       - 8443:8443
     environment:
-        DATABASE_HOST: mysql
+      DATABASE_HOST: mysql
     restart: always
     networks:
       - default
