@@ -1,7 +1,6 @@
 # Use the official OpenLiteSpeed image with dynamic OLS and PHP version
-ARG OLS_VERSION
-ARG PHP_VERSION
-FROM ghcr.io/ndigitals/openlitespeed:${OLS_VERSION}-${PHP_VERSION}
+
+FROM ghcr.io/ndigitals/openlitespeed:1.8.2-lsphp83
 
 # Set environment variables
 ENV TZ=${TimeZone}
