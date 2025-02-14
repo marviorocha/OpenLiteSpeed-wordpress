@@ -15,7 +15,7 @@ FROM ghcr.io/ndigitals/openlitespeed:latest
 
 COPY sites/localhost/html /var/www/vhosts/localhost/html
 COPY sites/localhost/html/wp-config-prod.php /var/www/vhosts/localhost/html/wp-config.php
-COPY bin/fix-permissions.sh /var/www/vhosts/localhost/
+COPY bin/fix-permissions.sh /var/www/vhosts/localhost
 # Set permission for wordpress
 RUN chmod +x /var/www/vhosts/localhost/fix-permissions.sh 
 RUN /var/www/vhosts/localhost/fix-permissions.sh

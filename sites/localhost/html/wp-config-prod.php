@@ -90,6 +90,7 @@ define('WP_DEBUG', false);
 
 define('FS_METHOD', 'direct');
 
+define('UPLOADS', 'wp-content/uploads');
 
 
 
