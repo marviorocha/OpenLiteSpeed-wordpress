@@ -13,8 +13,8 @@
 #### SETTINGS
 # default values, if no arguments are given to the script call:
 DEFAULT_WP_ROOT="/var/www/vhosts/localhost/html" # <-- wordpress root directory
-DEFAULT_WP_OWNER="1000"  # <-- wordpress owner
-DEFAULT_WP_GROUP="1000"  # <-- wordpress group
+DEFAULT_WP_OWNER="root"  # <-- wordpress owner
+DEFAULT_WP_GROUP="root"  # <-- wordpress group
 DEFAULT_WWW_GROUP="$DEFAULT_WP_GROUP" # <-- webserver group (usually the same as WP_GROUP)
 # optional if you don't want a confirmation:
 NO_CONFIRM=1
