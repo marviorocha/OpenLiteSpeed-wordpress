@@ -1,0 +1,22 @@
+<div class="flex flex-col">
+
+    <div class="" x-show="parseInt(station_data.toggle_marqueet)">
+        <div :style="{ '--mq-bg': 'transparent', '--mq-hover-bg': 'transparent' }" id="marquee"
+            class="marqueefy py-0 w-40 m-0 absolute" data-mq-speed="40" tabindex="0">
+            <div class="content">
+                <div id="scroll-text"
+                    x-text="station_data.marqueet_one ? station_data.marqueet_one : 'Here is your marquee radio promotion or news...'">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div x-text=" station_data.radio_name ? station_data.radio_name : 'StationPro.co'"
+        :style="{'color': station_data.text_color }"
+        class=" truncate mt-6  w-40 text-sm  text-stone-100  md:flex md:text-sm font-semibold dark:text-gray-200">
+    </div>
+
+
+
+
+
+</div>

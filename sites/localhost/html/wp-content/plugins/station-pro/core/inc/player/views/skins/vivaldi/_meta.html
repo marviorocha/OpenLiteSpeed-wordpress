@@ -1,0 +1,30 @@
+<!-- <figure :style="{'border-color': station_data.text_color }"
+    class="mx-3 shadow-md dark:bg-slate-300/[.6] rounded-lg p-1 animate__animated animate__delay-2s">
+    <img :src="station_data.radio_logo.url ? station_data.radio_logo.url : 'https://picsum.photos/1024/1024' "
+        class="rounded-lg back w-10 h-10 md:w-15 md:h-15 " width="40" height="40" :alt="station_data.radio_name">
+</figure> -->
+
+
+
+<span class="text-sm flex items-center md:w-52    dark:text-gray-200">
+
+    <span x-show='!play' :style="{'color': station_data.text_color }"
+        class="amplitude-current-time  text-white md:flex font-bold  text-sm  "></span>
+    <span x-show='play' :style="{'color': station_data.text_color }" style="color: #EEE" class="play">00:00</span>
+
+
+
+
+    <div x-show=" parseInt(station_data.btn_status)">
+        <span x-show="!play"
+            class="bg-red-600  animate__animated animate__fadeInUp animate__delay-1s text-white animate-pulse  mx-2  w-12   md:w-12 font-bold text-xs rounded-md p-1 drop-shadow-md">ON
+            AIR </span>
+        <span x-show="play"
+            class="bg-slate-300 animate__animated animate__fadeInDown animate__delay-1s text-gray-800 mx-2 w-20 md:w-14 font-bold text-xs rounded-md p-1 drop-shadow-md">OFFLINE</span>
+    </div>
+
+
+
+
+</span>
+<!-- <p x-text=" station_data.radio_description ? station_data.radio_description : 'Radio slugan here'" class=" text-xs md:text-sm text-gray-800 dark:text-gray-200"> </p> -->
