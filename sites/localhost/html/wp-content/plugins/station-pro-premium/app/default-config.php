@@ -5,7 +5,6 @@ if (!class_exists('Redux')) {
 }
 
 
-global $stationpro;
 
 
 
@@ -17,6 +16,7 @@ $opt_name = 'stationpro';
  * For full documentation on arguments, please refer to: @link https://github.com/ReduxFramework/ReduxFramework/wiki/Arguments
  */
 
+global $stationpro;
 /**
  * ---> BEGIN ARGUMENTS
  */
@@ -38,7 +38,7 @@ $args = array(
     'display_name' => 'StationPro.co',
 
     // Version that appears at the top of your panel.
-    'display_version' => 'v' . $data_plugins['station-pro-premium/stationpro.php']['Version'],
+    'display_version' => 'v' . $stationpro->is_plan('premium') ? $data_plugins['station-pro-premium/stationpro.php']['Version'] : $data_plugins['station-pro-premium/stationpro.php']['Version'],
     'type_version' => $stationpro->is_plan('premium') ? 'premium version' : 'version free',
 
     // Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only).

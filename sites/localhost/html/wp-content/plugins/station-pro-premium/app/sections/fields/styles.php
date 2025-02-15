@@ -4,7 +4,7 @@ Redux::set_section(
     $opt_name,
     array(
         'title' => esc_html__('Style your player', 'stationpro'),
-        'desc' => esc_html__('In this option you can customize it and improve its appearance! If you want, you can position yourself at the top of the page. ', 'stationpro') . (stationpro()->is_not_paying() ? '<p class="my-2 notification is-info is-light">Some feature are only premium; please <a class="is-text" href=' . $stationpro->get_upgrade_url() . ' title="upgrade"> upgrade your plugin </a>  for more customization.</p>' : ''),
+        'desc' => esc_html__('In this option you can customize it and improve its appearance! If you want, you can position yourself at the top of the page. ', 'stationpro') . (stationpro()->is__premium_only() == false ? '<p class="my-2 notification is-info is-light">Some feature are only premium; please <a class="is-text" href=' . $stationpro->get_upgrade_url() . ' title="upgrade"> upgrade your plugin </a>  for more customization.</p>' : ''),
         'id' => 'player_styles',
         'subsection' => true,
         'customizer_width' => '900px',
