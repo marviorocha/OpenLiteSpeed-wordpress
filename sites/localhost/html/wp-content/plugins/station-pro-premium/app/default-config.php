@@ -38,7 +38,7 @@ $args = array(
     'display_name' => 'StationPro.co',
 
     // Version that appears at the top of your panel.
-    'display_version' => 'v' . $data_plugins['station-pro/stationpro.php']['Version'],
+    'display_version' => 'v' . $data_plugins['station-pro-premium/stationpro.php']['Version'],
     'type_version' => $stationpro->is_plan('premium') ? 'premium version' : 'version free',
 
     // Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only).
