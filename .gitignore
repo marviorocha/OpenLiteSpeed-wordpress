@@ -2,3 +2,5 @@ data
 latest.yml
 config
 lsws/conf
+
+sites/localhost/html/wp-content/uploads/*
