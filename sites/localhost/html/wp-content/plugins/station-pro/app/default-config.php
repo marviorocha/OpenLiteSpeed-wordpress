@@ -38,8 +38,8 @@ $args = array(
     'display_name' => 'StationPro.co',
 
     // Version that appears at the top of your panel.
-    'display_version' => 'v' . $stationpro->is_plan('premium') ? $data_plugins['station-pro-premium/stationpro.php']['Version'] : $data_plugins['station-pro-premium/stationpro.php']['Version'],
-    'type_version' => $stationpro->is_plan('premium') ? 'premium version' : 'version free',
+    'display_version' => 'v' . stationpro()->is__premium_only() == false ? $data_plugins['station-pro-premium/stationpro.php']['Version'] : $data_plugins['station-pro-premium/stationpro.php']['Version'],
+    'type_version' => stationpro()->is__premium_only() == false  ? 'premium version' : 'version free',
 
     // Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only).
     'menu_type' => 'menu',
