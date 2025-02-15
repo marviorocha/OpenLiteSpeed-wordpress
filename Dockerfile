@@ -13,8 +13,8 @@ FROM ghcr.io/ndigitals/openlitespeed:latest
 # COPY logs /usr/local/lsws/logs/
 
 
-COPY sites/localhost/html/wp-content/plugins/station-pro /var/www/vhosts/localhost/html/wp-content/plugins/station-pro/
-COPY sites/localhost/html/wp-content/plugins/station-pro-premium /var/www/vhosts/localhost/html/wp-content/plugins/station-pro-premium/
+
+COPY sites/localhost/html/wp-content/plugins /var/www/vhosts/localhost/html/wp-content/plugins
 COPY sites/localhost/html/wp-content/themes /var/www/vhosts/localhost/html/wp-content/themes
 COPY sites/localhost/html/wp-config-prod.php /var/www/vhosts/localhost/html/wp-config.php
 COPY bin/fix-permissions.sh /var/www/vhosts/localhost
