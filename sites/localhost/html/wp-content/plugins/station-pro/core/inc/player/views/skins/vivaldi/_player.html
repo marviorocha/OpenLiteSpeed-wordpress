@@ -1,0 +1,35 @@
+<button x-bind="navplayer" class="transition transform duration-500 ease-in hover:scale-105">
+
+    <div x-show="load" class="fill-current relative z-10 p-1 items-center bg-white rounded-full w-14 h-14"
+        style="display: none;">
+        <div class="w-12 h-12 rounded-full absolute border-4 border-solid border-gray-200">
+        </div>
+        <div :class="'border-' + station_data.accent_color + '-600' "
+            class="w-12 h-12 rounded-full animate-spin absolute border-4 border-solid border-gray-600 border-t-transparent">
+        </div>
+    </div>
+
+    <div x-show="!load">
+
+        <svg x-show="play" :class="'text-' + station_data.accent_color + '-600'  "
+            class="fill-current relative z-10 w-14 h-14 text-indigo-500 bg-white rounded-full shadow-lg hover:text-opacity-70 text-undefined-600"
+            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" viewBox="0 0 24 24">
+            <path
+                d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5l6-4.5l-6-4.5v9z">
+            </path>
+            <rect></rect>
+        </svg>
+
+        <svg fill="none" x-show="!play" :class="'text-' + station_data.accent_color + '-600' "
+            class="relative z-10 text-indigo-600 w-14 h-14 bg-white rounded-full shadow-lg hover:text-opacity-70 text-undefined-600"
+            stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" style="display: none;">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+    </div>
+
+    <span x-show="play" class="animate-ping absolute top-2 left-2 z-1 rounded-full w-10 h-10 bg-white opacity-40">
+    </span>
+
+</button>

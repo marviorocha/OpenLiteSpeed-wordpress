@@ -1,0 +1,69 @@
+<div class="text-center hidden md:flex items-center basis-1/4 space-x-2 sm:text-left  sm:justify-end sm:items-center ">
+    <!-- volum control  -->
+    <div class="w-auto">
+        <span :class="'bg-' + station_data.accent_color + '-500' "
+            class="inline-flex items-center rounded-full p-2 cursor-pointer bg-indigo-500  text-white group transition-all duration-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none"
+            role="alert" tabindex="0">
+            <i :class="vol >= 50 ? 'hidden' : ''" class="material-icons text-white">volume_down</i>
+            <i :class="vol < 50 ? 'hidden' : ''" class="material-icons text-white">volume_up</i>
+            <span
+                class="whitespace-nowrap items-center inline-block group-hover:max-w-screen-2xl group-focus:max-w-screen-2xl max-w-0 scale-80 group-hover:scale-100 overflow-hidden transition-all duration-500 group-hover:px-2 group-focus:px-2">
+                <input type="range" min="1" range name="vol" max="100" x-model="vol"
+                    class="rounded-lg overflow-hidden amplitude-volume-slider cursor-appearance-none bg-slate-100 dark:bg-slate-700  h-3 w-128" />
+            </span>
+        </span>
+    </div>
+    <!-- // End volum control -->
+
+
+    <a id="modelboxnew"
+        :class="'bg-' + station_data.accent_color + '-500 hover:bg-' + station_data.accent_color + '-600 focus:ring-' + station_data.accent_color + '-500' "
+        x-show="parseInt(station_data.toggle_action)"
+        :href="'http://' + window.location.host + '/?page_id=' + station_data.schedule_link " href="?page_id=27"
+        target="_blank"
+        class="py-2 hidden a2a_dd px-3 md:inline-flex justify-center items-center gap-2 rounded-md sm:rounded-full border border-transparent font-semibold   text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2  focus:ring-offset-2 transition-all text-sm md:py-3 md:px-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+        </svg>
+        Schedule
+    </a>
+
+
+
+    <span x-show="parseInt(station_data.toggle_favorite)"
+        :class=" 'bg-' + station_data.accent_color + '-500 focus:ring-' + station_data.accent_color + '-600' "
+        x-bind="toggleFavorite"
+        class="inline-flex  bg-indigo-500 focus:ring-indigo-600 items-center rounded-full p-2 cursor-pointer  text-white group transition-all duration-500 focus:ring-2  focus:ring-offset-2 focus:outline-none"
+        role="alert" tabindex="0">
+        <svg x-show="!favorite" x-transition xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+        </svg>
+
+        <svg x-show="favorite" x-transition xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            class="w-6 h-6">
+            <path
+                d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+        </svg>
+
+        <span
+            class="whitespace-nowrap inline-block group-hover:max-w-screen-2xl group-focus:max-w-screen-2xl max-w-0 scale-80 group-hover:scale-100 overflow-hidden transition-all duration-500 group-hover:px-2 group-focus:px-2">Favorite</span>
+    </span>
+
+    <span x-bind="widget" x-ref="popup"
+        :class=" 'bg-' + station_data.accent_color + '-500 focus:ring-' + station_data.accent_color + '-600' "
+        class="inline-flex items-center rounded-full p-2 cursor-pointer  bg-indigo-500 focus:ring-indigo-600   text-white group transition-all duration-500 focus:ring-2  focus:ring-offset-2 focus:outline-none"
+        role="alert" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+        </svg>
+        <span
+            class="whitespace-nowrap inline-block group-hover:max-w-screen-2xl group-focus:max-w-screen-2xl max-w-0 scale-80 group-hover:scale-100 overflow-hidden transition-all duration-500 group-hover:px-2 group-focus:px-2" />Open
+        in screen</span>
+    </span>
+</div>
