@@ -35,6 +35,7 @@ if (!class_exists('Redux_Player', false)) {
          */
         public function __construct()
         {
+
             add_action('wp_footer', array($this, 'player_screen'), 10);
             add_shortcode('stationpro', array($this, 'station_pro_shortcode'));
         }

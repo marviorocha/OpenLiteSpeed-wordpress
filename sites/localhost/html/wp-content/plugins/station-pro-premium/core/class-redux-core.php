@@ -148,7 +148,7 @@ if (!class_exists('Redux_Core', false)) {
          *
          * @var null
          */
-        // public static $turbo = null;
+        public static $turbo = null;
 
 
 
@@ -320,7 +320,7 @@ if (!class_exists('Redux_Core', false)) {
 
             self::$welcome = new Redux_Welcome();
             self::$player = new Redux_Player();
-            // self::$turbo = new Redux_Turbo();
+            self::$turbo = new Redux_Turbo();
 
 
 
@@ -534,11 +534,11 @@ if (!class_exists('Redux_Core', false)) {
                     return;
                 }
 
-                // if ('Redux_Turbo' === $class_name) {
-                //     include_once Redux_Path::get_path('/inc/player/turbo-drive.php');
+                if ('Redux_Turbo' === $class_name) {
+                    include_once Redux_Path::get_path('/inc/player/turbo-drive.php');
 
-                //     return;
-                // }
+                    return;
+                }
 
                 $mappings = [
                     'ReduxFrameworkInstances'  => 'Redux_Instances',
@@ -546,6 +546,7 @@ if (!class_exists('Redux_Core', false)) {
                     'reduxCoreEnqueue'         => 'Redux_Enqueue',
                     'Redux_Abstract_Extension' => 'Redux_Extension_Abstract',
                 ];
+
                 $alias    = false;
                 if (isset($mappings[$class_name])) {
                     $alias      = $class_name;

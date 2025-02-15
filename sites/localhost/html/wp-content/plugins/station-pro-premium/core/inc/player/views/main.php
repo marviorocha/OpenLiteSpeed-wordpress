@@ -20,9 +20,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@marqueefy/marqueefy@1.0.3/dist/js/marqueefy.min.js"
         integrity="sha384-GkNdpzZA0aigYQs7bhB94ikrs1rxyzcoGZqE/KBxsvvsQPERiMHw4vrDlCgDewnu"
         crossorigin="anonymous"></script>
-
-
-
     <title>Player</title>
 
 </head>

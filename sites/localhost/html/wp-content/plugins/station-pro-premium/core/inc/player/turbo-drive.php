@@ -25,7 +25,7 @@ if (!class_exists('Redux_Turbo', false)) {
         {
 
 
-            add_action('wp_body_open', array($this, 'insert_html_before_header'));
+            add_action('wp_body_open', array($this, 'insert_html_before_header'), 10);
 
             add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'), 10);
 

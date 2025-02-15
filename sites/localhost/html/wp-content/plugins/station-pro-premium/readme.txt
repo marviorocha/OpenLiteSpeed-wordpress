@@ -1,5 +1,5 @@
 === Station Pro ===
-Contributors: marviorocha
+Contributors: marviorocha, freemius
 Tags: radio online, player, icecast, streaming, shoutcast
 Requires at least: 5.0
 Requires PHP: 7.1

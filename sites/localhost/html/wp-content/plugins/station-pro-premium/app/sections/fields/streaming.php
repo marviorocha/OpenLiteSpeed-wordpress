@@ -25,6 +25,7 @@ Redux::set_section(
                 'validate' => array(
                     'url'
                 ),
+                'default' => 'https://exemple_radio_com:8080/stream'
             ),
 
         ),
@@ -53,7 +54,7 @@ Redux::set_section(
                 'validate' => array(
                     'url'
                 ),
-                'default' => esc_attr('http://c4.radioboss.fm:8560/stream')
+                'default' => 'https://exemple_radio_com:8080'
             ),
         ),
 

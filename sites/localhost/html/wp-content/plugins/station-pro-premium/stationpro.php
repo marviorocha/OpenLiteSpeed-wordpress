@@ -1,10 +1,11 @@
 <?php // phpcs:ignore Squiz.Commenting.FileComment.Missing
 /**
  *
- * Plugin Name:         Station PRO - Streaming Radio Player
+ * Plugin Name: Station PRO - Streaming Radio Player (Premium)
  * Plugin URI:          http://wordpress.org/plugins/station-pro
  * Description:         Station Pro: Stream radio easily. Browser or player plugin connects you live.
  * Version:             2.4.0
+ * Update URI: https://api.freemius.com
  * Tested up to:        6.7.2
  * Stable tag:          2.4.0
  * Requires at least:   5.0

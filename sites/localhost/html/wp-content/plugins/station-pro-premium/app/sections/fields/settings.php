@@ -66,7 +66,7 @@ Redux::set_section(
                 'type' => 'switch',
                 'title' => esc_attr('On AIR', 'stationpro'),
                 'subtitle' => esc_html__('Toggle between displaying "Offline" or "On Air" based on the current play.', 'stationpro'),
-                'default'  => esc_html__('on'),
+                'default'  => true,
             ),
             array(
                 'id' => 'toggle_action',
