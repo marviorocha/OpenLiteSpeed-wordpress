@@ -92,7 +92,7 @@ define('FS_METHOD', 'direct');
 
 define('UPLOADS', 'wp-content/uploads');
 
-
+define('WP_MEMORY_LIMIT', '256M');
 
 
 /** Absolute path to the WordPress directory. */

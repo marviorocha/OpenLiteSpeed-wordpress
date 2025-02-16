@@ -26,6 +26,7 @@ services:
       - ./sites:/var/www/vhosts/
       - ./acme:/root/.acme.sh/
       - ./logs:/usr/local/lsws/logs/
+      - ./php/php.ini:/usr/local/lsws/lsphp83/etc/php/8.3/litespeed/php.ini
     ports:
       - 80:80
       - 443:443

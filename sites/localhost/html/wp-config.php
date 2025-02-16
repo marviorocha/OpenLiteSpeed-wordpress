@@ -59,6 +59,8 @@ define('LOGGED_IN_SALT',   '&=plY5[lE13^]h+#^$t*.o(.@.Dd>-3(%A]|KExm5p!EE<h@Tz57
 define('NONCE_SALT',       '#YyB~H;c>dO& OO7|LF{aGyn+TTU8k&H}PN-`8-aWI:=7I<:qP.i8gOa@SVf3IOE');
 /**#@-*/
 
+define('WP_MEMORY_LIMIT', '256M');
+
 /**
  * WordPress database table prefix.
  *
