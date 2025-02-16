@@ -6,7 +6,7 @@ FROM ghcr.io/ndigitals/openlitespeed:latest
 
 
 # Copy configuration files
-COPY lsws/conf /usr/local/lsws/conf/
+# COPY lsws/conf /usr/local/lsws/conf/
 COPY lsws/admin-conf /usr/local/lsws/admin/conf/
 COPY ./php/php.ini /usr/local/lsws/lsphp83/etc/php/8.3/litespeed/php.ini
 # COPY bin/container /usr/local/bin/
